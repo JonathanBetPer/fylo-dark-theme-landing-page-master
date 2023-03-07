@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 :root {
     --Dark-blue: hsl(217, 28%, 15%);
     --Cian: hsl(176, 68%, 64%);
@@ -15,7 +17,7 @@
 
 body {
     font-size: 14px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: var(--Dark-blue);
     background-position: 50rem;
     background-repeat: no-repeat;

@@ -3,6 +3,7 @@
 
 :root {
     --Dark-blue: hsl(217, 28%, 15%);
+    --quotes:hsl(219, 30%, 18%);
     --Cian: hsl(176, 68%, 64%);
     --Blue: hsl(198, 60%, 50%); 
     --Light-red: hsl(0, 100%, 63%);
@@ -10,10 +11,11 @@
     
 }
 
-* {
-    margin: 0;
-    padding: 0;
+
+*,*:before,*:after{
+    box-sizing:inherit;
 }
+
 
 body {
     font-size: 14px;
@@ -148,13 +150,157 @@ input{
 }
 
 
+.formulario{
+    background-color: var(--email-sign-up-background);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario h1{
+    color: var(--white);
+    padding: auto;
+    font-weight: 800;
+    text-align: center;
+}
+
+.formulario p{
+    color: var(--white);
+    padding: 0 5rem;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+#email{
+    padding: 1.5rem;
+    padding-right: 9rem;
+    border-radius: 5rem;
+    margin: 2rem;
+    border: none;
+}
+
+
+.seccion2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion2 img{
+    width: 25rem;
+}
+
+.seccion2 .contenido{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    max-width: 29rem;
+    margin: 0.8rem auto;
+}
+
+.seccion2 h1{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.seccion2 p{
+    color: var(--white);
+}
+
+.seccion2 a{
+    text-decoration: none;
+    color: var(--blue-button);
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+.seccion2 a img {
+    width: 2rem;
+    
+}
+
+.quotes{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem auto;
+    color: var(--white);
+    background-image: url(/images/bg-quotes.png);
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    margin: 2rem;
+    padding: 3rem;
+}
+
+
+.opinion{
+    max-width: 30rem;
+    background-color: var(--quotes);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.opinion p{
+    font-size: 1.1rem;
+}
+
+.usuario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.usuario h1{
+    font-size: 1.3rem;
+}
+
+.usuario img{
+    border-radius: 50%;
+    height: 5rem;
+}
+
+.rrss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.enlaces_rrss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid white;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.enlaces_rrss svg{
+    width: 60%;
+    height: 60%;
+}
+
 
 
 
 
 /*Diseño desktop*/
 
-@media (min-width: 460px) {
+@media Screen and (min-width: 1285px) {
         
 
     .intro {
@@ -194,12 +340,12 @@ input{
     }
 
     form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: auto;
 
     }
+
 
     input{
         padding: 1rem 7rem;
@@ -232,10 +378,23 @@ input{
         justify-content: center;
         align-items: center;
     }
+
+
+    .seccion2{
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 1rem;
+        justify-content: space-around;
+        margin: 4rem 30rem;
+    }
+
+    .quotes {
+        display: flex;
+        flex-direction: row;
+    }
+
 }
 
-
-    
 
 /* Footer*/
 .attribution { font-size: 11px; text-align: center; }
